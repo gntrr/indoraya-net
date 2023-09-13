@@ -121,7 +121,7 @@
                                         <h1 class="card-title pricing-card-title">Rp. {{ $service->price }}<small
                                                 class="text-muted fw-light">/bln</small></h1>
                                         <ul class="list-unstyled my-4">
-                                            <li>Up to <span class="fw-bold">3 Mb</span></li>
+                                            <li>Up to <span class="fw-bold">{{ $service->speed }} Mbps</span></li>
                                             <li>Full optical fiber</li>
                                             <li>Free installation</li>
                                         </ul>
