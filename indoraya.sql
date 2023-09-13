@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Sep 12, 2023 at 03:52 AM
+-- Generation Time: Sep 13, 2023 at 03:56 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -36,6 +36,13 @@ CREATE TABLE `cctv_services` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `cctv_services`
+--
+
+INSERT INTO `cctv_services` (`id`, `name`, `description`, `price`, `image`, `created_at`, `updated_at`) VALUES
+(1, 'BARDI Smart IP Camera Outdoor Static', 'Kamera pintar yang dapat menyalurkan video dan suara lewat smartphone. Memiliki tempat penyimpanan slot SD Card max 128GB.', '646.000', 'cctv_images/65016833b779e.jpg', '2023-09-13 00:41:34', '2023-09-13 00:43:47');
 
 -- --------------------------------------------------------
 
@@ -128,6 +135,16 @@ CREATE TABLE `testimonies` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `testimonies`
+--
+
+INSERT INTO `testimonies` (`id`, `name`, `content`, `created_at`, `updated_at`) VALUES
+(1, 'Hamba Allah', 'Recomended banget', '2023-09-12 01:26:14', '2023-09-12 01:26:14'),
+(2, 'Gendut', 'JOSS, TOP MARKOTOP', '2023-09-12 01:26:31', '2023-09-12 01:26:31'),
+(3, 'Amil', 'layanan nya sipp deh', '2023-09-12 01:27:10', '2023-09-12 01:27:58'),
+(4, 'Yanto', 'guud', '2023-09-12 01:27:34', '2023-09-12 01:27:34');
+
 -- --------------------------------------------------------
 
 --
@@ -171,6 +188,15 @@ CREATE TABLE `wifi_services` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `wifi_services`
+--
+
+INSERT INTO `wifi_services` (`id`, `name`, `description`, `speed`, `price`, `created_at`, `updated_at`) VALUES
+(1, 'Paket MurMer', 'Dapatkan layanan internet cepat dengan harga MurMer (Murah Meriah).', 10, '150.000', '2023-09-12 01:21:38', '2023-09-12 01:25:35'),
+(2, 'Paket Geming', 'Dapatkan layanan internet dengan latency rendah, cocok untuk kaum gamer.', 20, '300.000', '2023-09-12 01:23:14', '2023-09-12 01:25:25'),
+(3, 'Paket Korporat', 'Dapatkan layanan internet yang cepat dan stabil, cocok untuk keperluan bisnis anda.', 50, '500.000', '2023-09-12 01:25:04', '2023-09-12 01:25:16');
 
 --
 -- Indexes for dumped tables
@@ -239,7 +265,7 @@ ALTER TABLE `wifi_services`
 -- AUTO_INCREMENT for table `cctv_services`
 --
 ALTER TABLE `cctv_services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `equipment_networks`
@@ -269,7 +295,7 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT for table `testimonies`
 --
 ALTER TABLE `testimonies`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -281,7 +307,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `wifi_services`
 --
 ALTER TABLE `wifi_services`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
